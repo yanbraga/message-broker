@@ -1,5 +1,5 @@
 {
-  "name": "tec-migracao-field",
+  "name": "message-broker",
   "version": "1.0",
   "description": "",
   "main": "index.js",
