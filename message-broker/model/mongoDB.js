@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const contatoSchema = new mongoose.Schema({
+const contactSchema = new mongoose.Schema({
     id: { type: String },
     codigo: { type: String },
     nome: { type: String },
@@ -26,15 +26,15 @@ const contatoSchema = new mongoose.Schema({
     sexo: { type: String },
     clienteDesde: { type: String },
     dataNascimento: { type: String },
-    tiposContato: [
+    tiposcontact: [
       {
-        tipoContato: {
+        tipocontact: {
           descricao: { type: String }
         }
       }
     ]
 });
 
-const Contato = mongoose.model('Contato', contatoSchema);
+const contact = mongoose.model('contact', contactSchema);
 
-module.exports = Contato;
+module.exports = contact;
