@@ -4,21 +4,7 @@ const contactDB = require("./model/mongoDB");
 const controllerBroker = require("./controller/controller_broker");
 
 
-// rota teste
-router.get("/teste/contatos/", async (req, res) => {
-  try {
-    // Use o modelo contact e o método find() para buscar todos os contatos no banco de dados.
-    const contatos = await contactDB.find().limit(3).exec();
 
-    if (!contatos || contatos.length === 0) {
-      res.status(404).json({ message: "Nenhum contato encontrado" });
-    } else {
-      res.json(contatos);
-    }
-  } catch (error) {
-    res.status(500).json({ message: "Erro ao buscar os contatos", error });
-  }
-});
 
 //send to rabbit
 router.get("/start", async (req, res) => {
