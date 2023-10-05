@@ -37,4 +37,10 @@ const contactSchema = new mongoose.Schema({
 
 const contactDB = mongoose.model('Contato', contactSchema);
 
-module.exports = contactDB;
+const contactDB_DEV_BASE = mongoose.model('contatos', contactSchema);
+
+module.exports = {
+  
+  contactDB, contactDB_DEV_BASE
+
+}
